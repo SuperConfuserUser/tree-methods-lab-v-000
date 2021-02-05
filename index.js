@@ -27,13 +27,13 @@ function findOrAdd(root, node) {
 
 function max(node) {
   let ordered = [];
-  function order(node) {
-    if (node.left) {
-      order(node.left);
+  function order(currentNode) {
+    if (currentNode.left) {
+      order(currentNode.left);
     }
     ordered.push(node);
-    if (node.right) {
-      order(node.right);
+    if (currentNode.right) {
+      order(currentNode.right);
     }
   }
   return { data: node };
