@@ -31,7 +31,7 @@ function max(node) {
     if (node.left) {
       order(node.left);
     }
-    ordered.push(node.data)
+    ordered.push(node);
     if (node.right) {
       order(node.right);
     }
