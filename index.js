@@ -34,7 +34,8 @@ function max(node) {
     if (currentNode.right) {
       order(currentNode.right);
     }
-    return currentNode;
   }
-  return { data: currentNode };
+  
+  order(node);
+  return { data: ordered };
 }
