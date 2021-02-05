@@ -28,6 +28,8 @@ function findOrAdd(root, node) {
 function max(node) {
   if (node.right) {
     max(node.right)
+  } else {
+    
   }
-  else return node;
+  
 }
