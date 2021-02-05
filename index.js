@@ -25,21 +25,17 @@ function findOrAdd(root, node) {
   return true;
 }
 
-function order(currentNode, ordered) {
-  if (currentNode.left) {
-    order(currentNode.left, ordered);
-  }
-  ordered.push(currentNode);
-  if (currentNode.right) {
-    order(currentNode.right, ordered);
-  } else {
-    return ordered;
-  }
-}
-  
 function max(node) {
-
-  order(node, []);
+  let ordered = [];
+  function order(currentNode) {
+    if (currentNode.left) {
+      order(currentNode.left);
+    }
+    ordered.push(currentNode);
+    if (currentNode.right) {
+      order(currentNode.right);
+    }
+  }
   
-  return { data: order(node, []) };
+  return { data: ordered };
 }
