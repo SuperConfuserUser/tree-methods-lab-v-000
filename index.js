@@ -29,7 +29,7 @@ function order(currentNode, ordered) {
   if (currentNode.left) {
     order(currentNode.left);
   }
-  order.push(currentNode);
+  ordered.push(currentNode);
   if (currentNode.right) {
     order(currentNode.right);
   } else {
@@ -39,7 +39,7 @@ function order(currentNode, ordered) {
   
 function max(node) {
 
-  ordered(node, []);
+  order(node, []);
   
-  return { data: ordered(node, []) };
+  return { data: order(node, []) };
 }
