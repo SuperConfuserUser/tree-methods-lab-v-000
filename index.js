@@ -31,6 +31,7 @@ function max(node) {
     if (currentNode.left) {
       order(currentNode.left);
     }
+    debugger;
     ordered.push(currentNode);
     if (currentNode.right) {
       order(currentNode.right);
