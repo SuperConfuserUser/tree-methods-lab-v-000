@@ -27,11 +27,11 @@ function findOrAdd(root, node) {
 
 function order(currentNode, ordered) {
   if (currentNode.left) {
-    order(currentNode.left);
+    order(currentNode.left, ordered);
   }
   ordered.push(currentNode);
   if (currentNode.right) {
-    order(currentNode.right);
+    order(currentNode.right, ordered);
   } else {
     return ordered;
   }
