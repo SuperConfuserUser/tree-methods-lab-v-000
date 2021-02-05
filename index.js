@@ -36,5 +36,5 @@ function max(node) {
     }
     return currentNode;
   }
-  return { data: ordered };
+  return { data: currentNode };
 }
