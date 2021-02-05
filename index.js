@@ -35,12 +35,18 @@ function order(node) {
     if (currentNode.right) {
       traverse(currentNode.right);
     }
+    else return currentNode;
   }
-  traverse(node);
-  return ordered;
+  return traverse(node);
+  // return ordered;
 }
 
 function max(node) {
   const ordered = order(node);
-  return ordered[ordered.length - 1];
+  return order(node);
+  // return ordered[ordered.length - 1];
+}
+
+function min(node) {
+  
 }
