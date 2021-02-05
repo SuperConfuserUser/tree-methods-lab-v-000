@@ -26,10 +26,15 @@ function findOrAdd(root, node) {
 }
 
 function max(node) {
-  if (node.right) {
-    max(node.right)
-  } else {
-    
+  const ordered;
+  function order(check) {
+    if (node.left) {
+      order(node.left);
+    }
+    ordered.push(node)
+    if (node.right) {
+      order(node.right);
+    }
   }
-  
+  return ordered;
 }
