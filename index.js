@@ -26,7 +26,7 @@ function findOrAdd(root, node) {
 }
 
 function max(node) {
-  const ordered = [];
+  let ordered = [];
   function order(check) {
     if (node.left) {
       order(node.left);
