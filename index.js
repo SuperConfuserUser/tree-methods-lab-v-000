@@ -36,7 +36,7 @@ function order(node) {
       traverse(currentNode.right);
     }
   }
-  order(node);
+  traverse(node);
   return ordered;
 }
 
