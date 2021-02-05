@@ -31,10 +31,10 @@ function max(node) {
     if (currentNode.left) {
       order(currentNode.left);
     }
-    ordered.push(node);
+    ordered.push(currentNode);
     if (currentNode.right) {
       order(currentNode.right);
     }
   }
-  return { data: currentNode };
+  return { data: ordered };
 }
